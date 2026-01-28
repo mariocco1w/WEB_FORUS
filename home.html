@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Para ti Mi Vida</title>
+        <lilnk rel = "styleheat" href="css/style.css">
+    </head>
+    <body>
+
+<!--BIENVENIDA-->
+<header class="hero">
+    <h1>Este lugar esta echo pensado solo para ti <3</h1>
+    <p>Hecho desde el corazon, pensado con cariño</p>
+</header>
+
+<!--TEXTOS/POEMAS-->
+<section class = "text-section">
+    <p>A veces no hace falta grandes discursos,
+        solo un espacio para decirte lo que siento.
+    </p>
+</section>
+
+<!--Cartas desbloqueables-->
+<section class ="cards-section">
+    <h2>Cartas para ti 💌</h2>
+
+    <div class="cards-container">
+
+      <div class="card-wrapper">
+        <div class="card" data-id ="carta 1" data-message="Eres mi lugar seguro.">
+          <div class="card-face card-front">💌</div>
+          <div class="card-face card-back">❤️</div>
+        </div>
+      </div>
+
+      <div class="card-wrapper">
+        <div class="card" data-id="carta2" data-message="Contigo, todo se siente más simple.">
+          <div class="card-face card-front">💌</div>
+          <div class="card-face card-back">❤️</div>
+        </div>
+      </div>
+
+      <div class="card-wrapper">
+        <div class="card" data-id="carta 3" data-message="Elegirte todos los días es fácil.">
+          <div class="card-face card-front">💌</div>
+          <div class="card-face card-back">❤️</div>
+        </div>
+      </div>
+
+    </div>
+</section>
+<!-- =====================
+       GALERÍA DE IMÁGENES
+  ====================== -->
+  <section class="gallery-section">
+    <h2>Momentos nuestros</h2>
+
+    <div class="gallery">
+      <img src="images/foto1.jpg" alt="Momento 1" class="gallery-img">
+      <img src="images/foto2.jpg" alt="Momento 2" class="gallery-img">
+      <img src="images/foto3.jpg" alt="Momento 3" class="gallery-img">
+    </div>
+  </section>
+
+  <!--=============
+        MODAL DE IMAGENES
+        =====================-->
+        <div class="image-modal" id ="image-modal">
+          <span class="image-close">&time;</span>
+          <img id="modal-image" alt="">
+        </div>
+
+  <!-- =====================
+       MODAL (FRASES)
+  ====================== -->
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p id="modal-text"></p>
+    </div>
+  </div>
+
+  <script src="js/cards.js"></script>
+  <script src="js/gallery.js"></script>
+</body>
+</html>
