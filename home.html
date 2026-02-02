@@ -13,6 +13,24 @@
     <p>Hecho desde el corazon, pensado con cariño</p>
 </header>
 
+<!--MUSIC OPTION-->
+<section class="music-player">
+  <button id="music-btn">▶ Reproducir cancion</button>
+  <audio id ="audio">
+    <source src ="music/song.mp3" type="audio/mpeg">
+  </audio>
+</section>
+
+<!--TIME SECTION-->
+<section class = "time-section">
+  <p class = "time-text">
+    Y pensar que si este dia <span class = "date">03/09/2025</span> no te hubiera escrito 
+    nada de esto hubiera pasado.<br>
+    Y todo lo que nos hace falta.
+  </p>
+  <div class ="time-counter" id ="time-counter">
+  </div>
+</section> 
 <!--TEXTOS/POEMAS-->
 <section class = "text-section">
     <p>A veces no hace falta grandes discursos,
@@ -79,8 +97,23 @@
       <p id="modal-text"></p>
     </div>
   </div>
+<!--=========================== 
+IMAGEN SORPRESA FINAL 
+  ============-->
+  <section class = "surprise-section">
+    <h2>Hasta las estrellas presenciaron cuando comenzo todo</h2>
+    <img
+    src ="images/mapa_estelar.jpg"
+    alt="Nuestro Cielo"
+    class = "surprise-img">
+  </section>
+  
+
 
   <script src="js/cards.js"></script>
   <script src="js/gallery.js"></script>
+  <script src="js/time.js"></script>
+  <script src="js/surprise.js"></script>
+  <script src="js/music.js"></script>
 </body>
 </html>
