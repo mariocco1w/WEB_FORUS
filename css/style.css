@@ -1,3 +1,4 @@
+/*=========== CARDS STYLES ==============*/
 .cards-container {
     display: flex;
     gap: 25px;
@@ -42,6 +43,7 @@
     background: #ffb3c6;
     transform: rotateY(180deg);
   }
+  /*============ GALLLERY STYLES ============*/
   .gallery-section {
     padding: 60px 20px;
     text-align: center;
@@ -68,6 +70,7 @@
     transform: scale(1.03);
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
   }
+  /*================= IMAGES MODAL STYLES ==============*/
   .image-modal {
     display: none;
     position: fixed;
@@ -93,7 +96,7 @@
     color: white;
     cursor: pointer;
   }
-  
+  /*===================== ANIMATIONS =================*/
   @keyframes zoomIn {
     from {
       transform: scale(0.85);
@@ -104,4 +107,202 @@
       opacity: 1;
     }
   }
+  /*======================= GENERAL STYLES ==============*/
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
   
+  body {
+    font-family: "Segoe UI", system-ui, sans-serif;
+    background: linear-gradient(180deg, #fff5f8, #ffffff);
+    color: #333;
+    line-height: 1.6;
+  }
+  .hero {
+    padding: 80px 20px 60px;
+    text-align: center;
+  }
+  
+  .hero h1 {
+    font-size: 2.6rem;
+    color: #b03060;
+    margin-bottom: 15px;
+  }
+  
+  .hero p {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  .text-section {
+    padding: 40px 20px;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .text-section p {
+    font-size: 1.05rem;
+    color: #444;
+  }
+/*==================== ADITTIONAL ARDS STYLES */
+  .cards-section {
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .cards-section h2 {
+    color: #b03060;
+    margin-bottom: 20px;
+  }
+  
+  .card-front {
+    background: linear-gradient(135deg, #ffe6ec, #ffd6e2);
+  }
+  
+  .card-back {
+    background: linear-gradient(135deg, #ffb3c6, #ff8fab);
+  }
+/*===================== ADDITIONAL GALLLERY STYLES ===================*/
+  .gallery-section h2 {
+    color: #b03060;
+    margin-bottom: 30px;
+  }
+  
+  .gallery-img {
+    filter: brightness(0.95);
+  }
+  
+  .gallery-img:hover {
+    filter: brightness(1);
+  }/*======================= ADITTIONAL MODAL STYLES =======================*/
+  
+  .modal-content,
+.image-modal img {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+::selection {
+  background: #ffd6e2;
+}
+
+/*======================= LOGIN STYLES ====================*/
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.login-container h1 {
+  color: #b03060;
+  margin-bottom: 10px;
+}
+
+.login-container p {
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.login-container input {
+  padding: 12px 15px;
+  width: 240px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  outline: none;
+}
+
+.login-container input:focus {
+  border-color: #ff8fab;
+}
+
+.login-container button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  background: #ff8fab;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login-container button:hover {
+  background: #b03060;
+}
+
+.login-message {
+  margin-top: 15px;
+  color: #b03060;
+  font-size: 0.95rem;
+}
+
+/*========== MUSIC SECTION =========*/
+.music-player {
+  text-align: center;
+  margin: 20px 0 40px;
+}
+
+.music-player button {
+  padding: 10px 22px;
+  border-radius: 25px;
+  border: none;
+  background: #ff8fab;
+  color: white;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.music-player button:hover {
+  background: #b03060;
+}
+/*================= TIME SECTION ===================*/
+.time-section {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.time-text {
+  font-size: 1.1rem;
+  color: #444;
+  max-width: 650px;
+  margin: 0 auto 20px;
+}
+
+.time-counter {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #b03060;
+  letter-spacing: 1px;
+}
+
+
+/*================= SURPRISE SECTION ===============*/
+
+.surprise-section {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.surprise-section h2 {
+  color: #b03060;
+  margin-bottom: 25px;
+}
+
+.surprise-img {
+  max-width: 90%;
+  border-radius: 15px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1.2s ease, transform 1.2s ease;
+}
