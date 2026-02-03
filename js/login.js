@@ -1,5 +1,5 @@
 const aliasCorrecto ="Pulguita";
-const input = document.getElementary("alias");
+const input = document.getElementById("alias");
 const button = document.getElementById("login-btn");
 const message = document.getElementById("login-message");
 
