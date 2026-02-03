@@ -1,4 +1,4 @@
-const aliasCorrecto ="Pulguita";
+const aliasCorrecto ="pulguita";
 const input = document.getElementById("alias");
 const button = document.getElementById("login-btn");
 const message = document.getElementById("login-message");
