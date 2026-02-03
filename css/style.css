@@ -306,3 +306,42 @@
   transform: translateY(30px);
   transition: opacity 1.2s ease, transform 1.2s ease;
 }
+/*======= HERO ==========*/
+.hero {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  color: #b03060;
+  max-width: 700px;
+  margin-bottom: 20px;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 500px;
+  line-height: 1.8;
+}
+
+.hero {
+  animation: fadeIn 1.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
