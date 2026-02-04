@@ -101,9 +101,10 @@ button:hover {
 }
 
 #time-counter {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: #b03060;
-  margin-top: 10px;
+  margin-top: 15px;
+  font-weight: bold;
 }
 
 /* =========================
