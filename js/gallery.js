@@ -1,23 +1,21 @@
-const images = document.querySelectorAll(".gallery-img");
-const modal = document.getElementById("image-modal");
-const modalImg = document.getElementById("modal-image");
-const closeBtn = document.querySelector(".image-close");
+const galleryImages = document.querySelectorAll(".gallery img");
+const modal = document.getElementById("gallery-modal");
+const modalImg = document.getElementById("gallery-modal-img");
+const closeBtn = document.querySelector(".close-gallery");
 
-images.forEach(img => {
+galleryImages.forEach(img => {
   img.addEventListener("click", () => {
-    modalImg.src = img.src;
     modal.style.display = "flex";
+    modalImg.src = img.src;
   });
 });
 
 closeBtn.addEventListener("click", () => {
   modal.style.display = "none";
-  modalImg.src = "";
 });
 
-modal.addEventListener("click", e => {
+modal.addEventListener("click", (e) => {
   if (e.target === modal) {
     modal.style.display = "none";
-    modalImg.src = "";
   }
 });
