@@ -1,331 +1,31 @@
-/*=========== CARDS STYLES ==============*/
-.cards-container {
-    display: flex;
-    gap: 25px;
-    justify-content: center;
-    margin-top: 30px;
-  }
-  
-  .card-wrapper {
-    perspective: 1000px;
-  }
-  
-  .card {
-    width: 120px;
-    height: 160px;
-    position: relative;
-    transform-style: preserve-3d;
-    transition: transform 0.8s ease;
-    cursor: pointer;
-  }
-  
-  .card.open {
-    transform: rotateY(180deg);
-    cursor: default;
-  }
-  
-  .card-face {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 40px;
-    border-radius: 12px;
-    backface-visibility: hidden;
-  }
-  
-  .card-front {
-    background: #ffe6ec;
-  }
-  
-  .card-back {
-    background: #ffb3c6;
-    transform: rotateY(180deg);
-  }
-  /*============ GALLLERY STYLES ============*/
-  .gallery-section {
-    padding: 60px 20px;
-    text-align: center;
-  }
-  
-  .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 20px;
-    max-width: 900px;
-    margin: 0 auto;
-  }
-  
-  .gallery-img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 14px;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .gallery-img:hover {
-    transform: scale(1.03);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-  }
-  /*================= IMAGES MODAL STYLES ==============*/
-  .image-modal {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.8);
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-  }
-  
-  .image-modal img {
-    max-width: 90%;
-    max-height: 90%;
-    border-radius: 16px;
-    animation: zoomIn 0.4s ease;
-  }
-  
-  .image-close {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    font-size: 32px;
-    color: white;
-    cursor: pointer;
-  }
-  /*===================== ANIMATIONS =================*/
-  @keyframes zoomIn {
-    from {
-      transform: scale(0.85);
-      opacity: 0;
-    }
-    to {
-      transform: scale(1);
-      opacity: 1;
-    }
-  }
-  /*======================= GENERAL STYLES ==============*/
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: "Segoe UI", system-ui, sans-serif;
-    background: linear-gradient(180deg, #fff5f8, #ffffff);
-    color: #333;
-    line-height: 1.6;
-  }
-  .hero {
-    padding: 80px 20px 60px;
-    text-align: center;
-  }
-  
-  .hero h1 {
-    font-size: 2.6rem;
-    color: #b03060;
-    margin-bottom: 15px;
-  }
-  
-  .hero p {
-    font-size: 1.1rem;
-    color: #555;
-    max-width: 500px;
-    margin: 0 auto;
-  }
-  .text-section {
-    padding: 40px 20px;
-    max-width: 700px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  
-  .text-section p {
-    font-size: 1.05rem;
-    color: #444;
-  }
-/*==================== ADITTIONAL ARDS STYLES */
-  .cards-section {
-    padding: 60px 20px;
-    text-align: center;
-  }
-  
-  .cards-section h2 {
-    color: #b03060;
-    margin-bottom: 20px;
-  }
-  
-  .card-front {
-    background: linear-gradient(135deg, #ffe6ec, #ffd6e2);
-  }
-  
-  .card-back {
-    background: linear-gradient(135deg, #ffb3c6, #ff8fab);
-  }
-  .cards-section {
-    margin-top: 60px;
-    text-align: center;
-  }
-  
-  .cards {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-  
-  .card {
-    width: 80px;
-    height: 80px;
-    font-size: 2rem;
-    cursor: pointer;
-  }
-  
-/*===================== ADDITIONAL GALLLERY STYLES ===================*/
-  .gallery-section h2 {
-    color: #b03060;
-    margin-bottom: 30px;
-  }
-  
-  .gallery-img {
-    filter: brightness(0.95);
-  }
-  
-  .gallery-img:hover {
-    filter: brightness(1);
-  }/*======================= ADITTIONAL MODAL STYLES =======================*/
-  
-  .modal-content,
-.image-modal img {
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+/* =========================
+   RESET Y BASE GLOBAL
+========================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Georgia', serif;
 }
 
-::selection {
-  background: #ffd6e2;
+body {
+  background: linear-gradient(to bottom, #ffffff, #fdecef);
+  color: #333;
+  line-height: 1.8;
 }
 
-/*======================= LOGIN STYLES ====================*/
-.login-container {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 20px;
+/* =========================
+   CONTENEDOR GENERAL
+========================= */
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 60px 20px;
 }
 
-.login-container h1 {
-  color: #b03060;
-  margin-bottom: 10px;
-}
-
-.login-container p {
-  color: #555;
-  margin-bottom: 25px;
-}
-
-.login-container input {
-  padding: 12px 15px;
-  width: 240px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
-  margin-bottom: 15px;
-  outline: none;
-}
-
-.login-container input:focus {
-  border-color: #ff8fab;
-}
-
-.login-container button {
-  padding: 12px 25px;
-  border: none;
-  border-radius: 8px;
-  background: #ff8fab;
-  color: white;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.login-container button:hover {
-  background: #b03060;
-}
-
-.login-message {
-  margin-top: 15px;
-  color: #b03060;
-  font-size: 0.95rem;
-}
-
-/*========== MUSIC SECTION =========*/
-.music-player {
-  text-align: center;
-  margin: 20px 0 40px;
-}
-
-.music-player button {
-  padding: 10px 22px;
-  border-radius: 25px;
-  border: none;
-  background: #ff8fab;
-  color: white;
-  font-size: 0.95rem;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.music-player button:hover {
-  background: #b03060;
-}
-/*================= TIME SECTION ===================*/
-.time-section {
-  text-align: center;
-  padding: 40px 20px;
-}
-
-.time-text {
-  font-size: 1.1rem;
-  color: #444;
-  max-width: 650px;
-  margin: 0 auto 20px;
-}
-
-.time-counter {
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: #b03060;
-  letter-spacing: 1px;
-}
-
-
-/*================= SURPRISE SECTION ===============*/
-
-.surprise-section {
-  text-align: center;
-  padding: 80px 20px;
-}
-
-.surprise-section h2 {
-  color: #b03060;
-  margin-bottom: 25px;
-}
-
-.surprise-img {
-  max-width: 90%;
-  border-radius: 15px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 1.2s ease, transform 1.2s ease;
-}
-/*======= HERO ==========*/
+/* =========================
+   HERO
+========================= */
 .hero {
   min-height: 80vh;
   display: flex;
@@ -333,27 +33,28 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 40px 20px;
+  animation: fadeIn 1.5s ease forwards;
 }
 
 .hero h1 {
-  font-size: 2.8rem;
+  font-size: 3rem;
   color: #b03060;
   max-width: 700px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .hero-subtitle {
   font-size: 1.1rem;
-  color: #555;
+  color: #666;
   max-width: 500px;
   line-height: 1.8;
 }
 
-.hero {
-  animation: fadeIn 1.5s ease forwards;
+.highlight {
+  color: #ff8fab;
 }
 
+/* Animación suave */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -364,51 +65,140 @@
     transform: translateY(0);
   }
 }
-.hero h1 {
-  font-size: 3rem;
-  text-align: center;
-  color: #b03060;
-  margin-bottom: 10px;
-}
 
-.hero p {
-  text-align: center;
-  color: #666;
-  font-size: 1.1rem;
-}
-
-
-/*===== estilo home*/
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: 'Georgia', serif;
-}
-
-body {
-  background: linear-gradient(to bottom, #fff, #fdecef);
-  color: #333;
-  line-height: 1.8;
-}
-.container {
-  max-width: 900px;
-  margin: auto;
-  padding: 60px 20px;
-}
-/*======== CAJA MUSICAL ============*/
+/* =========================
+   BOTÓN MÚSICA
+========================= */
 button {
   background: #ff8fab;
   border: none;
-  padding: 10px 20px;
+  padding: 12px 24px;
   border-radius: 25px;
   color: white;
   font-size: 0.9rem;
   cursor: pointer;
-  margin: 20px auto;
+  margin: 25px auto;
   display: block;
+  transition: background 0.3s ease;
 }
 
 button:hover {
   background: #f06595;
+}
+
+/* =========================
+   SECCIÓN TIEMPO
+========================= */
+.time-section {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.time-section p {
+  margin-bottom: 15px;
+  font-size: 1rem;
+  color: #444;
+}
+
+#time-counter {
+  font-size: 1.1rem;
+  color: #b03060;
+  margin-top: 10px;
+}
+
+/* =========================
+   CARTAS
+========================= */
+.cards-section {
+  margin-top: 80px;
+  text-align: center;
+}
+
+.cards-section h2 {
+  margin-bottom: 30px;
+  color: #b03060;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  width: 80px;
+  height: 80px;
+  background: white;
+  border-radius: 15px;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+/* =========================
+   GALERÍA
+========================= */
+.gallery-section {
+  margin-top: 80px;
+  text-align: center;
+}
+
+.gallery-section h2 {
+  margin-bottom: 30px;
+  color: #b03060;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* =========================
+   SORPRESA FINAL (MAPA)
+========================= */
+.surprise-section {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.surprise-section h2 {
+  margin-bottom: 20px;
+  color: #b03060;
+}
+
+.surprise-section img {
+  max-width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* =========================
+   MENSAJE FINAL
+========================= */
+.final-message {
+  margin-top: 100px;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #555;
 }
