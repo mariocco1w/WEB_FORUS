@@ -166,6 +166,25 @@
   .card-back {
     background: linear-gradient(135deg, #ffb3c6, #ff8fab);
   }
+  .cards-section {
+    margin-top: 60px;
+    text-align: center;
+  }
+  
+  .cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .card {
+    width: 80px;
+    height: 80px;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  
 /*===================== ADDITIONAL GALLLERY STYLES ===================*/
   .gallery-section h2 {
     color: #b03060;
@@ -344,4 +363,52 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+.hero h1 {
+  font-size: 3rem;
+  text-align: center;
+  color: #b03060;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  text-align: center;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+
+/*===== estilo home*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Georgia', serif;
+}
+
+body {
+  background: linear-gradient(to bottom, #fff, #fdecef);
+  color: #333;
+  line-height: 1.8;
+}
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 60px 20px;
+}
+/*======== CAJA MUSICAL ============*/
+button {
+  background: #ff8fab;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  color: white;
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin: 20px auto;
+  display: block;
+}
+
+button:hover {
+  background: #f06595;
 }
