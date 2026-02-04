@@ -1,37 +1,40 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <title>Para ti Mi Vida</title>
-        <lilnk rel = "styleheat" href="css/style.css">
-    </head>
-    <body>
+<head>
+  <meta charset="UTF-8">
+  <title>Para ti Mi Vida</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
-<!--BIENVENIDA-->
-<section class="hero">
-    <h1>Este lugar existe porque existes tu </h1>
-    <p class ="hero-subtitle">
-      Hecho desde el corazon y pensado con cariño</p>
-    </section>
+<div class="container">
 
-<!--MUSIC OPTION-->
-<section class="music-player">
-  <button id="music-btn">▶ Reproducir cancion</button>
-  <audio id ="audio">
-    <source src ="music/song.mp3" type="audio/mpeg">
-  </audio>
-</section>
+  <!-- BIENVENIDA -->
+  <section class="hero">
+    <h1>Este lugar existe porque existes tú</h1>
+    <p class="hero-subtitle">
+      Hecho desde el corazón y pensado con cariño
+    </p>
+  </section>
 
-<!--TIME SECTION-->
-<section class = "time-section">
-  <p class = "time-text">
-    Y pensar que si este dia <span class = "date">03/09/2025</span> no te hubiera escrito 
-    nada de esto hubiera pasado.<br>
-    Y todo lo que nos hace falta.
-  </p>
-  <div class ="time-counter" id ="time-counter">
-  </div>
-</section> 
+  <!-- MUSIC OPTION -->
+  <section class="music-player">
+    <button id="music-btn">▶ Reproducir canción</button>
+    <audio id="audio">
+      <source src="music/song.mp3" type="audio/mpeg">
+    </audio>
+  </section>
+
+  <!-- TIME SECTION -->
+  <section class="time-section">
+    <p class="time-text">
+      Y pensar que si este día <span class="date">03/09/2025</span> no te hubiera escrito
+      nada de esto hubiera pasado.<br>
+      Y todo lo que nos hace falta.
+    </p>
+    <div class="time-counter" id="time-counter"></div>
+  </section>
+
 <!--TEXTOS/POEMAS-->
 <section class = "text-section">
     <p>A veces no hace falta grandes discursos,
@@ -43,7 +46,7 @@
 <section class ="cards-section">
     <h2>Cartas para ti 💌</h2>
 
-    <div class="cards-container">
+    <div class="cards">
 
       <div class="card-wrapper">
         <div class="card" data-id ="carta 1" data-message="Encontre en tu sonrisa lo que los astronautas buscan en las estrellas.">
@@ -125,7 +128,7 @@
         MODAL DE IMAGENES
         =====================-->
         <div class="image-modal" id ="image-modal">
-          <span class="image-close">&time;</span>
+          <span class="image-close">&times;</span>
           <img id="modal-image" alt="">
         </div>
 
@@ -150,11 +153,12 @@ IMAGEN SORPRESA FINAL
   </section>
   
 
-
+</div>
   <script src="js/cards.js"></script>
   <script src="js/gallery.js"></script>
   <script src="js/time.js"></script>
   <script src="js/surprise.js"></script>
   <script src="js/music.js"></script>
+
 </body>
 </html>
