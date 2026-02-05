@@ -1,18 +1,19 @@
-const audio =document.getElementById("audio");
+const music =document.getElementById("bg-music");
 const musicBtn = document.getElementById("music-btn");
 
 let isPlaying = false;
 
 musicBtn.addEventListener("click", () => {
     if(!isPPlaying){
-        audio.play();
+        music.play();
         musicBtn.textContent = " ⏸ Pausar cancion ";
+        isPlaying = true;
 
     }else{
-        audio.pausa();
+        audio.pause();
         musicBtn.textContent = " ▶ Reproducir cancion ";
+        isPlaying = false;
     }
-    isPlaying = !isPlaying;
 });
 
 audio.addEventListener("ended", () => {
