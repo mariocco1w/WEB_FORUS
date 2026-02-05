@@ -1,9 +1,17 @@
-const surpriseImg = document.querySelector(".surprise-img");
+const starMap = document.querySelector(".star-map");
 
-window.addEventListener("scroll", () => {
-  const rect = surpriseImg.getBoundingClientRect();
-  if (rect.top < window.innerHeight - 100) {
-    surpriseImg.style.opacity = "1";
-    surpriseImg.style.transform = "translateY(0)";
+const observer = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        starMap.classList.add("show");
+      }
+    });
+  },
+  {
+    threshold: 0.4
   }
-});
+);
+
+observer.observe(starMap);
+
