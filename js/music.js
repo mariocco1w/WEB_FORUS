@@ -4,7 +4,7 @@ const musicBtn = document.getElementById("music-btn");
 let isPlaying = false;
 
 musicBtn.addEventListener("click", () => {
-    if(!isPPlaying){
+    if(!isPlaying){
         music.play();
         musicBtn.textContent = " ⏸ Pausar cancion ";
         isPlaying = true;
