@@ -272,7 +272,9 @@ button:hover {
    SORPRESA FINAL (MAPA)
 ========================= */
 .star-map-section {
-  padding: 120px 10% 150px;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding: 120px 0 150px;
   text-align: center;
   background: linear-gradient(to bottom, #fff0f5, #0b0d17);
   color: white;
@@ -284,18 +286,15 @@ button:hover {
 }
 
 .star-map-container {
-  max-width: 800px;
+  max-width: 420px;
   margin: 0 auto;
-  overflow: hidden;
-  border-radius: 20px;
+  padding: 0 20px;
 }
 
 .star-map {
   width: 100%;
-  opacity: 0;
-  transform: scale(1.1);
-  transition: opacity 2s ease, transform 3s ease;
-  filter: drop-shadow(0 0 25px rgba(255,255,255,0.25));
+  height: auto;
+  display: block;
 }
 
 /* Cuando se activa */
